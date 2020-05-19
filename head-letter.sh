@@ -48,16 +48,18 @@ function polishletter
   #vim /usr/share/X11/locale/en_US.UTF-8/Compose
   echo "compose - za pomoca tweak ustawiony prawy alt a nastepnie     zawartosc"
   echo "unicode ctrl + shift + u po czym wpisuemy cyfry po U"
-  echo "Unicode|Char|Compose_"
-  echo "U0105   ą    ;a"
-  echo "U0107   ć    'c"
-  echo "U0119   ę    ;e"
-  echo "U0144   ń    'n"
-  echo "U015b   ś    's"
-  echo "U017a   ź    'z"
-  echo "U017c   ż    >z"
-  echo "U142    ł    /l" 
-  echo "U00f3   ó    'o"
+  cat << 'EOF'
+Unicode|Char|Compose
+U0105   ą    ;a
+U0107   ć    'c
+U0119   ę    ;e
+U0144   ń    'n
+U015b   ś    's
+U017a   ź    'z
+U017c   ż    >z
+U142    ł    /l 
+U00f3   ó    'o
+EOF
 }
 
 function unicode
