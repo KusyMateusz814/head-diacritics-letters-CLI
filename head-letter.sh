@@ -174,7 +174,7 @@ function head-letter
        PS1="\[\e[1m\]\[\033[31m\]$(russianletter)\n$PS1"
    else
      PS1=$defaultPS1
-     echo "nie podales jezyka -ger/-cz/-pl/-phoe/-ru przywrócono     domyslny header"
+     echo "nie podales jezyka -ger/-cz/-pl/-phoe/-rus przywrócono     domyslny header"
    fi
 }
 
