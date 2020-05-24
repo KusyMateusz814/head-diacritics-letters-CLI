@@ -156,26 +156,26 @@ function head-letter
    #\[\e[1m\] - odpowiada za wyboldowanie napisów - uwaga musi by    c przed odpowiedzialnym za kolor dla danego fragmentu tekstu
    if [ "$1" = "-ger" ]
      then
-       PS1=$defaultPS1
+       PS1="$defaultPS1"
        PS1="\[\e[1m\]\[\033[31m\]$(germanletter)\n$PS1"
    elif [ "$1" = "-cz" ]
      then
-       PS1=$defaultPS1
+       PS1="$defaultPS1"
        PS1="\[\e[1m\]\[\033[31m\]$(czechletter)\n$PS1"
    elif [ "$1" = "-pl" ]
      then
-       PS1=$defaultPS1
+       PS1="$defaultPS1"
        PS1="\[\e[1m\]\[\033[31m\]$(polishletter)\n$PS1"
    elif [ "$1" = "-phoe" ]
      then
-       PS1=$defaultPS1
+       PS1="$defaultPS1"
        PS1="\[\e[1m\]\[\033[31m\]$(phoenicianletter)\n$PS1"
    elif [ "$1" = "-rus" ]
      then
-       PS1=$defaultPS1
+       PS1="$defaultPS1"
        PS1="\[\e[1m\]\[\033[31m\]$(russianletter)\n$PS1"
    else
-     PS1=$defaultPS1
+     PS1="$defaultPS1"
      echo "nie podales jezyka -ger/-cz/-pl/-phoe/-rus przywrócono     domyslny header"
    fi
 }
