@@ -180,4 +180,11 @@ function head-letter
    fi
 }
 
+#vim /usr/share/X11/locale/en_US.UTF-8/Compose
+
+function unicode-default 
+{
+  vim /usr/share/X11/locale/en_US.UTF-8/Compose
+}
+
 
