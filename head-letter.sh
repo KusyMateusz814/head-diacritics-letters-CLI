@@ -187,4 +187,15 @@ function unicode-default
   vim /usr/share/X11/locale/en_US.UTF-8/Compose
 }
 
+#example execute tweak_create_new_shortcuts sin 𐤔 U10914 s z
+#OUTPUT TO FILE .XCompose
+##sin 𐤔 U10914 s z 
+##<Multi_key> <p> <s> <z> : "𐤔" #U10914
+##<Multi_key> <s> <i> <n>  : "𐤔" #U10914
+function tweak_create_new_shortcuts
+{
+  ~/Projects/tweaks_create_new_shortcuts/./tweak_add_shortcut.sh "$1" "$2" "$3" "$4" "$5">> ~/.XCompose
+  cat ~/.XCompose
+} 
+
 
