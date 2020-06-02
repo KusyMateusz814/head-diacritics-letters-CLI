@@ -195,6 +195,7 @@ function unicode-default
 function tweak_create_new_shortcuts
 {
   ~/Projects/tweaks_create_new_shortcuts/./tweak_add_shortcut.sh "$1" "$2" "$3" "$4" "$5">> ~/.XCompose
+  cpXCompose
   cat ~/.XCompose
 } 
 
@@ -203,4 +204,8 @@ function unicode-firefox
   firefox "https://www.compart.com/en/unicode/U+00E4" #dobry slownik do unicode
 }
 
-
+function cpXCompose
+{
+  this_dir="$(pwd)"
+  cp /home/matball/.XCompose "$this_dir"/.XComposeBackup 
+}
