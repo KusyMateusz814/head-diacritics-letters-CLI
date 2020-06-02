@@ -1,0 +1,174 @@
+include "%L"
+################## PHOENICIAN FENICKI PHOENIZISCH
+#aleph 𐤀 U10900
+<Multi_key> <p> <a> : "𐤀"
+<Multi_key> <a> <l> <e> <p> <h>  : "𐤀" #U10900
+#beth 𐤁 U10901 b  
+<Multi_key> <p> <b> : "𐤁" #U10901
+<Multi_key> <b> <e> <t> <h>  : "𐤁" #U10901
+#giml 𐤂 U10902 g  
+<Multi_key> <p> <g> : "𐤂" #U10902
+<Multi_key> <g> <i> <m> <l>  : "𐤂" #U10902
+#dalet 𐤃 U10903 d  
+<Multi_key> <p> <d> : "𐤃" #U10903
+<Multi_key> <d> <a> <l> <e> <t>  : "𐤃" #U10903
+#he 𐤄 U10904 h  
+<Multi_key> <p> <h> : "𐤄" #U10904
+<Multi_key> <h> <e>  : "𐤄" #U10904
+#waw 𐤅 U10905 w  
+<Multi_key> <p> <w> : "𐤅" #U10905
+<Multi_key> <w> <a> <w>  : "𐤅" #U10905
+#zayin 𐤆 U10906 z  
+<Multi_key> <p> <z> : "𐤆" #U10906
+<Multi_key> <z> <a> <y> <i> <n>  : "𐤆" #U10906
+#het 𐤇 U10907 h . 
+<Multi_key> <p> <h> <.> : "𐤇" #U10907
+<Multi_key> <h> <e> <t>  : "𐤇" #U10907
+#tet 𐤈 U10908 t  
+<Multi_key> <p> <t> : "𐤈" #U10908
+<Multi_key> <t> <e> <t>  : "𐤈" #U10908
+#yod 𐤉 U10909 y  
+<Multi_key> <p> <y> : "𐤉" #U10909
+<Multi_key> <y> <o> <d>  : "𐤉" #U10909
+#kap 𐤊 U1090A k  
+<Multi_key> <p> <k> : "𐤊" #U1090A
+<Multi_key> <k> <a> <p>  : "𐤊" #U1090A
+#lamed 𐤋 U1090B l  
+<Multi_key> <p> <l> : "𐤋" #U1090B
+<Multi_key> <l> <a> <m> <e> <d>  : "𐤋" #U1090B
+#mem 𐤌 U1090C m  
+<Multi_key> <p> <m> : "𐤌" #U1090C
+<Multi_key> <m> <e> <m>  : "𐤌" #U1090C
+#nun 𐤍 U1090C n  
+<Multi_key> <p> <n> : "𐤍" #U1090C
+<Multi_key> <n> <u> <n>  : "𐤍" #U1090C
+#samek 𐤎 U1090E s  
+<Multi_key> <p> <s> : "𐤎" #U1090E
+<Multi_key> <s> <a> <m> <e> <k>  : "𐤎" #U1090E
+#ayin 𐤏 U1090F o  
+<Multi_key> <p> <o> : "𐤏" #U1090F
+<Multi_key> <a> <y> <i> <n>  : "𐤏" #U1090F
+#pe 𐤐 U10910 p  
+<Multi_key> <p> <p> : "𐤐" #U10910
+<Multi_key> <p> <e>  : "𐤐" #U10910
+#sade 𐤑 U10911 s . 
+<Multi_key> <p> <s> <.> : "𐤑" #U10911
+<Multi_key> <s> <a> <d> <e>  : "𐤑" #U10911
+#qop 𐤒 U10912 q  
+<Multi_key> <p> <q> : "𐤒" #U10912
+<Multi_key> <q> <o> <p>  : "𐤒" #U10912
+#res 𐤓 U10913 r  
+<Multi_key> <p> <r> : "𐤓" #U10913
+#<Multi_key> <r> <e> <s>  : "𐤓" #U10913 #zakomentowane bo gryzie z cyrylico
+#sin 𐤔 U10914 s z 
+<Multi_key> <p> <s> <z> : "𐤔" #U10914
+<Multi_key> <s> <i> <n>  : "𐤔" #U10914
+#taw 𐤕 U10915 t . 
+<Multi_key> <p> <t> <.> : "𐤕" #U10915
+<Multi_key> <t> <a> <w>  : "𐤕" #U10915
+#I 𐤖 U10916 1  
+<Multi_key> <p> <1> : "𐤖" #U10916
+<Multi_key> <P> <I>  : "𐤖" #U10916
+#II 𐤚 U1091A 2  
+<Multi_key> <p> <2> : "𐤚" #U1091A
+<Multi_key> <P> <I> <I>  : "𐤚" #U1091A
+#III 𐤚 U1091B 3  
+<Multi_key> <p> <3> : "𐤚" #U1091B
+<Multi_key> <P> <I> <I> <I>  : "𐤚" #U1091B
+#X 𐤗 U10917 1 0 
+<Multi_key> <p> <1> <0> : "𐤗" #U10917
+<Multi_key> <P> <X>  : "𐤗" #U10917
+#XX 𐤘 U10918 2 0 
+<Multi_key> <p> <2> <0> : "𐤘" #U10918
+<Multi_key> <P> <X> <X>  : "𐤘" #U10918
+#PC 𐤙 U10919 1 0 0 
+<Multi_key> <p> <1> <0> <0> : "𐤙" #U10919
+<Multi_key> <P> <C>  : "𐤙" #U10919
+#separator 𐤟 U1091F p.  
+<Multi_key> <p> <p> <.> : "𐤟" #U1091F
+<Multi_key> <s> <e> <p> <a> <r> <a> <t> <o> <r>  : "𐤟" #U1091F
+#sin 𐤔 U10914 s z 
+<Multi_key> <p> <s> <z> : "𐤔" #U10914
+<Multi_key> <s> <i> <n>  : "𐤔" #U10914
+##################### KONIEC FENICKI PHOENICIAN PHONIZISCH ###
+
+##################### CYRYLICA CYRILIC KYRILLIZA 
+
+#ra а U0430   
+<Multi_key> <r> <a>  : "а" #U0430
+#rbe б U0431
+<Multi_key> <r> <b> <e>  : "б" #U0431
+#rwe в U0432   
+<Multi_key> <r> <w> <e>  : "в" #U0432
+#rge г U0433   
+<Multi_key> <r> <g> <e>  : "г" #U0433
+#rde д U0434   
+<Multi_key> <r> <d> <e>  : "д" #U0434
+#rje е U0435   
+<Multi_key> <r> <j> <e>  : "е" #U0435
+#rz.e ж U0436   
+<Multi_key> <r> <z> <.> <e>  : "ж" #U0436
+#rze з U0437   
+<Multi_key> <r> <z> <e>  : "з" #U0437
+#rjo ё U0451   
+<Multi_key> <r> <j> <o>  : "ё" #U0451
+#ri и U0438   
+<Multi_key> <r> <i>  : "и" #U0438
+#rj й U0439   
+<Multi_key> <r> <j>  : "й" #U0439
+#rka к U043A   
+<Multi_key> <r> <k> <a>  : "к" #U043A
+#rel л U043B   
+<Multi_key> <r> <e> <l>  : "л" #U043B
+#rem м U043C   
+<Multi_key> <r> <e> <m>  : "м" #U043C
+#ren н U043D   
+<Multi_key> <r> <e> <n>  : "н" #U043D
+#ro о U043E   
+<Multi_key> <r> <o>  : "о" #U043E
+#rpe п U043F   
+<Multi_key> <r> <p> <e>  : "п" #U043F
+#rer р U0440   
+<Multi_key> <r> <e> <r>  : "р" #U0440
+#res с U0441   
+<Multi_key> <r> <e> <s>  : "с" #U0441
+#rte т U0442   
+<Multi_key> <r> <t> <e>  : "т" #U0442
+#ru у U0443   
+<Multi_key> <r> <u>  : "у" #U0443
+#ref ф U0444   
+<Multi_key> <r> <e> <f>  : "ф" #U0444
+#rcha х U0445   
+<Multi_key> <r> <c> <h> <a>  : "х" #U0445
+#rce ц U0446   
+<Multi_key> <r> <c> <e>  : "ц" #U0446
+#rcze ч U0447   
+<Multi_key> <r> <c> <z> <e>  : "ч" #U0447
+#rsza ш U0448   
+<Multi_key> <r> <s> <z> <a>  : "ш" #U0448
+#rszcza щ U0449   
+<Multi_key> <r> <s> <z> <c> <z> <a>  : "щ" #U0449
+#rtw ъ U044A   
+<Multi_key> <r> <t> <w>  : "ъ" #U044A
+#ry ы U044B   
+<Multi_key> <r> <y>  : "ы" #U044B
+#rmi ь U044C   
+<Multi_key> <r> <m> <i>  : "ь" #U044C
+#re э U044D   
+<Multi_key> <r> <e>  : "э" #U044D
+#rju ю U044E   
+<Multi_key> <r> <j> <u>  : "ю" #U044E
+#rja я U044F   
+<Multi_key> <r> <j> <a>  : "я" #U044F
+##################### KONIEC RUSSIAN ROSYJSKI RUSSISCH OBECNY #########
+
+##################### USUNIETE Z ALFABETU ROSYJSKIEGO w 1917 oraz ukrainskie (kiedys dodam) ######### 
+#rii - ukrainskie i z lacinki - w rosyjskim przed 1917  - zastepujemy teraz przez "и"
+<Multi_key> <r> <i> <i> : "і" #U0456
+#rjac - przed 1917 w rosyjskim - esencja prawosławia jać – ros. ять  zastapione przez "е"
+<Multi_key> <r> <j> <a> <c> : "ѣ" #U0463
+#rfi rfita
+<Multi_key> <r> <f> <i> : "ѳ" #U0473 
+#riz rizyca      (iżyca – ros. ижица), już przed rewolucją używana do zapisu tylko jednego słowa (ros. мѵро tzn. krzyżmo), zastąpiona przez И 
+<Multi_key> <r> <i> <z> : "ѵ" #U0475
+
