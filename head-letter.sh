@@ -198,4 +198,9 @@ function tweak_create_new_shortcuts
   cat ~/.XCompose
 } 
 
+function unicode-firefox
+{
+  firefox "https://www.compart.com/en/unicode/U+00E4" #dobry slownik do unicode
+}
+
 
