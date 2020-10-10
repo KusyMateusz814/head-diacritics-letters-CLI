@@ -148,8 +148,50 @@ U1091F  𐤟      p.    separator"
 EOF
 }
 
+function ukrainianletter
+{
+  echo "compose - za pomoca tweak ustawiony prawy alt a nastepnie     zawartosc" 
+  echo "unicode ctrl + shift + u po czym wpisuemy cyfry po U"
+  cat << 'EOF'
+Unicode|Char|Pron.|Compose_"
+U430     a   a        ua    
+U431     б   be       ube   
+U432     в   we       uwe   
+U433     г   he       uhe   
+U491     ґ   ge       uge  
+U434     д   de       ude   
+U435     e   e        ue   
+U436     ж   że       uz.e  
+U437     з   ze       uze   
+U438     и   y        uy    
+U439     й   j        uj
+U456     і   i        ui         
+U457     ї   ji       uji 
+U43A     к   ka       uka   
+U43B     л   el       uel     
+U43C     м   em       uem   
+U43D     н   en       uen   
+U43E     о   o        uo    
+U43F     п   pe       upe   
+U440     р   er       uer   
+U441     с   es       ues   
+U442     т   te       ute   
+U443     у   u        uu    
+U444     ф   ef       uef   
+U445     х   cha      ucha  
+U446     ц   ce       uce   
+U447     ч   cze      ucze  
+U448     ш   sza      usza  
+U449     щ   szcza    uszcza
+U44C     ь   miekk    umi   
+U454     є   je       ue    
+U44E     ю   ju       uju   
+U44F     я   ja       uja   
+EOF
+}
+
 #modyfikowanie prompt
-function head-letter
+function head-letterrrr
 {
    #PS1="\[\033[31m\]$(germanletter)\n\[\e[1m\]$PS1"
    #\[\033[31m\] - odpowiada za kolor napisow
@@ -174,9 +216,13 @@ function head-letter
      then
        PS1="$defaultPS1"
        PS1="\[\e[1m\]\[\033[31m\]$(russianletter)\n$PS1"
+   elif [ "$1" = "-ukr" ]
+     then
+       PS1="$defaultPS1"
+       PS1="\[\e[1m\]\[\033[31m\]$(ukrainianletter)\n$PS1"
    else
      PS1="$defaultPS1"
-     echo "nie podales jezyka -ger/-cz/-pl/-phoe/-rus przywrócono     domyslny header"
+     echo "nie podales jezyka -ger/-cz/-pl/-phoe/-rus/-ukr przywrócono domyslny header"
    fi
 }
 

@@ -92,7 +92,77 @@ include "%L"
 <Multi_key> <s> <i> <n>  : "𐤔" #U10914
 ##################### KONIEC FENICKI PHOENICIAN PHONIZISCH ###
 
-##################### CYRYLICA CYRILIC KYRILLIZA 
+##################### CYRYLICA CYRILIC KYRILLIZA RUSSIAN
+
+#ua а U0430   
+<Multi_key> <u> <a>  : "а" #U0430
+#ube б U0431
+<Multi_key> <u> <b> <e>  : "б" #U0431
+#uwe в U0432   
+<Multi_key> <u> <w> <e>  : "в" #U0432
+#uhe г U0433   
+<Multi_key> <u> <h> <e>  : "г" #U0433
+#uge ґ U0491
+<Multi_key> <u> <g> <e>  : "ґ" #U0491 
+#rde д U0434   
+<Multi_key> <u> <d> <e>  : "д" #U0434
+#ue е U0435   
+<Multi_key> <u> <e>  : "е" #U0435
+#rz.e ж U0436   
+<Multi_key> <u> <z> <.> <e>  : "ж" #U0436
+#rze з U0437   
+<Multi_key> <u> <z> <e>  : "з" #U0437
+#uy и U0438   
+<Multi_key> <u> <y>  : "и" #U0438
+#uj й U0439   
+<Multi_key> <u> <j>  : "й" #U0439
+#ui і U0456
+<Multi_key> <u> <i>  : "і" #U0456
+#uji ї U0457
+<Multi_key> <u> <ї>  : "ї" #U0457
+#uka к U043A   
+<Multi_key> <u> <k> <a>  : "к" #U043A
+#uel л U043B   
+<Multi_key> <u> <e> <l>  : "л" #U043B
+#uem м U043C   
+<Multi_key> <u> <e> <m>  : "м" #U043C
+#uen н U043D   
+<Multi_key> <u> <e> <n>  : "н" #U043D
+#uo о U043E   
+<Multi_key> <u> <o>  : "о" #U043E
+#upe п U043F   
+<Multi_key> <u> <p> <e>  : "п" #U043F
+#uer р U0440   
+<Multi_key> <u> <e> <r>  : "р" #U0440
+#ues с U0441   
+<Multi_key> <u> <e> <s>  : "с" #U0441
+#ute т U0442   
+<Multi_key> <u> <t> <e>  : "т" #U0442
+#uu у U0443   
+<Multi_key> <u> <u>  : "у" #U0443
+#uef ф U0444   
+<Multi_key> <u> <e> <f>  : "ф" #U0444
+#ucha х U0445   
+<Multi_key> <u> <c> <h> <a>  : "х" #U0445
+#uce ц U0446   
+<Multi_key> <u> <c> <e>  : "ц" #U0446
+#rcze ч U0447   
+<Multi_key> <u> <c> <z> <e>  : "ч" #U0447
+#rsza ш U0448   
+<Multi_key> <u> <s> <z> <a>  : "ш" #U0448
+#uszcza щ U0449   
+<Multi_key> <u> <s> <z> <c> <z> <a>  : "щ" #U0449
+#umi ь U044C   
+<Multi_key> <u> <m> <i>  : "ь" #U044C
+#uje є U0454   
+<Multi_key> <u> <j> <e>  : "є" #U0454
+#uju ю U044E   
+<Multi_key> <u> <j> <u>  : "ю" #U044E
+#uja я U044F   
+<Multi_key> <u> <j> <a>  : "я" #U044F
+##################### KONIEC RUSSIAN ROSYJSKI RUSSISCH OBECNY #########
+
+##################### CYRYLICA CYRILIC KYRILLIZA Ukrainian
 
 #ra а U0430   
 <Multi_key> <r> <a>  : "а" #U0430
@@ -161,6 +231,8 @@ include "%L"
 #rja я U044F   
 <Multi_key> <r> <j> <a>  : "я" #U044F
 ##################### KONIEC RUSSIAN ROSYJSKI RUSSISCH OBECNY #########
+
+
 
 ##################### USUNIETE Z ALFABETU ROSYJSKIEGO w 1917 oraz ukrainskie (kiedys dodam) ######### 
 #rii - ukrainskie i z lacinki - w rosyjskim przed 1917  - zastepujemy teraz przez "и"
