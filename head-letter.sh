@@ -2,13 +2,13 @@
 
 function head-letter-vim
 {
-  vim /usr/share/X11/locale/en_US.UTF-8/Compose
+  vim "/usr/share/X11/locale/en_US.UTF-8/Compose"
 }
 
 function germanletter
 {
   #vim /usr/share/X11/locale/en_US.UTF-8/Compose
-  echo "compose - za pomoca tweak ustawiony prawy alt a nastepnie     zawartosc"
+  echo "compose - za pomoca tweak ustawiony prawy alt a nastepnie zawartosc"
   echo "unicode ctrl + shift + u po czym wpisuemy cyfry po U"
   cat << 'EOF'
 Unicode|Char|Compose_"
@@ -23,7 +23,7 @@ EOF
 function czechletter
 {
   #vim /usr/share/X11/locale/en_US.UTF-8/Compose
-   echo "compose - za pomoca tweak ustawiony prawy alt a nastepni    e zawartosc"
+   echo "compose - za pomoca tweak ustawiony prawy alt a nastepnie zawartosc"
    echo "unicode ctrl + shift + u po czym wpisuemy cyfry po U"
    cat << 'EOF'
 Unicode|Char|Compose_"
@@ -46,7 +46,7 @@ EOF
 function polishletter
 {
   #vim /usr/share/X11/locale/en_US.UTF-8/Compose
-  echo "compose - za pomoca tweak ustawiony prawy alt a nastepnie     zawartosc"
+  echo "compose - za pomoca tweak ustawiony prawy alt a nastepnie zawartosc"
   echo "unicode ctrl + shift + u po czym wpisuemy cyfry po U"
   cat << 'EOF'
 Unicode|Char|Compose
@@ -69,7 +69,7 @@ function unicode
 
 function russianletter
 {
-  echo "compose - za pomoca tweak ustawiony prawy alt a nastepnie     zawartosc" 
+  echo "compose - za pomoca tweak ustawiony prawy alt a nastepnie zawartosc" 
   echo "unicode ctrl + shift + u po czym wpisuemy cyfry po U"
   cat << 'EOF'
 Unicode|Char|Pron.|Compose_"
@@ -112,7 +112,7 @@ EOF
 function phoenicianletter
 {
   #vim /usr/share/X11/locale/en_US.UTF-8/Compose
-  echo "compose - za pomoca tweak ustawiony prawy alt a nastepnie     zawartosc"
+  echo "compose - za pomoca tweak ustawiony prawy alt a nastepnie zawartosc"
   echo "unicode ctrl + shift + u po czym wpisuemy cyfry po U"
 cat << 'EOF'
 Unicode|Char|Pron.|Compose_"
@@ -150,7 +150,7 @@ EOF
 
 function ukrainianletter
 {
-  echo "compose - za pomoca tweak ustawiony prawy alt a nastepnie     zawartosc" 
+  echo "compose - za pomoca tweak ustawiony prawy alt a nastepnie zawartosc" 
   echo "unicode ctrl + shift + u po czym wpisuemy cyfry po U"
   cat << 'EOF'
 Unicode|Char|Pron.|Compose_"
@@ -191,58 +191,56 @@ EOF
 }
 
 #modyfikowanie prompt
-function head-letterrrr
+function head-letter
 {
    #PS1="\[\033[31m\]$(germanletter)\n\[\e[1m\]$PS1"
    #\[\033[31m\] - odpowiada za kolor napisow
    #\[\e[1m\] - odpowiada za wyboldowanie napisów - uwaga musi by    c przed odpowiedzialnym za kolor dla danego fragmentu tekstu
-   if [ "$1" = "-ger" ]
-     then
+   if  [[ "$1" == "-ger" ]]; then
        PS1="$defaultPS1"
        PS1="\[\e[1m\]\[\033[31m\]$(germanletter)\n$PS1"
-   elif [ "$1" = "-cz" ]
-     then
+   elif [[ "$1" == "-cz" ]]; then
        PS1="$defaultPS1"
        PS1="\[\e[1m\]\[\033[31m\]$(czechletter)\n$PS1"
-   elif [ "$1" = "-pl" ]
-     then
+   elif [[ "$1" == "-pl" ]]; then
        PS1="$defaultPS1"
        PS1="\[\e[1m\]\[\033[31m\]$(polishletter)\n$PS1"
-   elif [ "$1" = "-phoe" ]
-     then
+   elif [[ "$1" = "-phoe" ]]; then
        PS1="$defaultPS1"
        PS1="\[\e[1m\]\[\033[31m\]$(phoenicianletter)\n$PS1"
-   elif [ "$1" = "-rus" ]
-     then
+   elif [[ "$1" == "-rus" ]]; then
        PS1="$defaultPS1"
        PS1="\[\e[1m\]\[\033[31m\]$(russianletter)\n$PS1"
-   elif [ "$1" = "-ukr" ]
-     then
+   elif [[ "$1" == "-ukr" ]]; then
        PS1="$defaultPS1"
        PS1="\[\e[1m\]\[\033[31m\]$(ukrainianletter)\n$PS1"
    else
-     PS1="$defaultPS1"
-     echo "nie podales jezyka -ger/-cz/-pl/-phoe/-rus/-ukr przywrócono domyslny header"
+       PS1="$defaultPS1"
+       echo "nie podales jezyka -ger/-cz/-pl/-phoe/-rus/-ukr przywrócono domyslny header"
    fi
 }
 
 #vim /usr/share/X11/locale/en_US.UTF-8/Compose
-
 function unicode-default 
 {
-  vim /usr/share/X11/locale/en_US.UTF-8/Compose
+  vim "/usr/share/X11/locale/en_US.UTF-8/Compose"
 }
 
+function tweak_create_new_shortcuts
+{
+  if [[ "$1" == "-h" || "$1" == "--help" || "$1" == "h" || "$1" == "help"  ]]; then 
+    cat << 'EOF'
 #example execute tweak_create_new_shortcuts sin 𐤔 U10914 s z
 #OUTPUT TO FILE .XCompose
 ##sin 𐤔 U10914 s z 
 ##<Multi_key> <p> <s> <z> : "𐤔" #U10914
 ##<Multi_key> <s> <i> <n>  : "𐤔" #U10914
-function tweak_create_new_shortcuts
-{
-  ~/Projects/tweaks_create_new_shortcuts/./tweak_add_shortcut.sh "$1" "$2" "$3" "$4" "$5">> ~/.XCompose
-  cpXCompose
-  cat ~/.XCompose
+EOF
+  else
+    ~/Projects/tweaks_create_new_shortcuts/./tweak_add_shortcut.sh "$1" "$2" "$3" "$4" "$5">> ~/.XCompose
+    cpXCompose
+    cat ~/.XCompose
+  fi
 } 
 
 function unicode-firefox
@@ -253,5 +251,5 @@ function unicode-firefox
 function cpXCompose
 {
   this_dir="$(pwd)"
-  cp /home/matball/.XCompose "$this_dir"/.XComposeBackup 
+  cp "/home/matball/.XCompose" "$this_dir""/.XComposeBackup"
 }
