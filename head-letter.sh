@@ -79,7 +79,7 @@ U432     в   we       rwe
 U433     г   ge       rge   
 U434     д   de       rde   
 U435     e   je       rje   
-U436     ж   że       rz.e  
+U436     ж   że       rzx
 U437     з   ze       rze   
 U451     ё   jo       rjo   
 U438     и   i        ri    
@@ -161,7 +161,7 @@ U433     г   he       uhe
 U491     ґ   ge       uge  
 U434     д   de       ude   
 U435     e   e        ue   
-U436     ж   że       uz.e  
+U436     ж   że       uzx
 U437     з   ze       uze   
 U438     и   y        uy    
 U439     й   j        uj
