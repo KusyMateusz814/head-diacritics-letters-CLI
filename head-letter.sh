@@ -196,27 +196,54 @@ function head-letter
    #PS1="\[\033[31m\]$(germanletter)\n\[\e[1m\]$PS1"
    #\[\033[31m\] - odpowiada za kolor napisow
    #\[\e[1m\] - odpowiada za wyboldowanie napisów - uwaga musi by    c przed odpowiedzialnym za kolor dla danego fragmentu tekstu
-   if  [[ "$1" == "-ger" ]]; then
-       PS1="$defaultPS1"
-       PS1="\[\e[1m\]\[\033[31m\]$(germanletter)\n$PS1"
-   elif [[ "$1" == "-cz" ]]; then
-       PS1="$defaultPS1"
-       PS1="\[\e[1m\]\[\033[31m\]$(czechletter)\n$PS1"
-   elif [[ "$1" == "-pl" ]]; then
-       PS1="$defaultPS1"
-       PS1="\[\e[1m\]\[\033[31m\]$(polishletter)\n$PS1"
-   elif [[ "$1" = "-phoe" ]]; then
-       PS1="$defaultPS1"
-       PS1="\[\e[1m\]\[\033[31m\]$(phoenicianletter)\n$PS1"
-   elif [[ "$1" == "-rus" ]]; then
-       PS1="$defaultPS1"
-       PS1="\[\e[1m\]\[\033[31m\]$(russianletter)\n$PS1"
-   elif [[ "$1" == "-ukr" ]]; then
-       PS1="$defaultPS1"
-       PS1="\[\e[1m\]\[\033[31m\]$(ukrainianletter)\n$PS1"
+   if  [[ -z "$2" ]]; then
+     if  [[ "$1" == "-ger" ]]; then
+         PS1="$defaultPS1"
+         PS1="\[\e[1m\]\[\033[31m\]$(germanletter)\n$PS1"
+     elif [[ "$1" == "-cz" ]]; then
+         PS1="$defaultPS1"
+         PS1="\[\e[1m\]\[\033[31m\]$(czechletter)\n$PS1"
+     elif [[ "$1" == "-pl" ]]; then
+         PS1="$defaultPS1"
+         PS1="\[\e[1m\]\[\033[31m\]$(polishletter)\n$PS1"
+     elif [[ "$1" = "-phoe" ]]; then
+         PS1="$defaultPS1"
+         PS1="\[\e[1m\]\[\033[31m\]$(phoenicianletter)\n$PS1"
+     elif [[ "$1" == "-rus" ]]; then
+         PS1="$defaultPS1"
+         PS1="\[\e[1m\]\[\033[31m\]$(russianletter)\n$PS1"
+     elif [[ "$1" == "-ukr" ]]; then
+         PS1="$defaultPS1"
+         PS1="\[\e[1m\]\[\033[31m\]$(ukrainianletter)\n$PS1"
+     else
+         PS1="$defaultPS1"
+         echo "nie podales jezyka -ger/-cz/-pl/-phoe/-rus/-ukr przywrócono domyslny header"
+     fi
    else
-       PS1="$defaultPS1"
-       echo "nie podales jezyka -ger/-cz/-pl/-phoe/-rus/-ukr przywrócono domyslny header"
+     if [[ "$2" == "--popup" || "$2" == "-p" ]]; then
+       else_flag="false"
+       if  [[ "$1" == "-ger" ]]; then
+           germanletter > headletterfile.txt
+       elif [[ "$1" == "-cz" ]]; then
+           czechletter > headletterfile.txt
+       elif [[ "$1" == "-pl" ]]; then
+           polishletter > headletterfile.txt
+       elif [[ "$1" = "-phoe" ]]; then
+           phoenicianletter > headletterfile.txt
+       elif [[ "$1" == "-rus" ]]; then
+           russianletter > headletterfile.txt
+       elif [[ "$1" == "-ukr" ]]; then
+           ukrainianletter > headletterfile.txt
+       else
+           echo "nie podales jezyka -ger/-cz/-pl/-phoe/-rus/-ukr przywrócono domyslny header"
+         else_flag="true"
+       fi
+       if [[ "$else_flag" == "false" ]];then
+         src_venv
+         python popup-head-letter.py
+         rm headletterfile.txt
+       fi
+     fi
    fi
 }
 
