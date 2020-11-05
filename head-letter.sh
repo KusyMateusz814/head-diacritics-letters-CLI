@@ -239,8 +239,7 @@ function head-letter
          else_flag="true"
        fi
        if [[ "$else_flag" == "false" ]];then
-         src_venv
-         python popup-head-letter.py
+         popup-head-letter
          rm headletterfile.txt
        fi
      fi
