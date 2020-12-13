@@ -178,6 +178,8 @@ include "%L"
 <Multi_key> <r> <j> <e>  : "е" #U0435
 #rz.e ж U0436   
 <Multi_key> <r> <z> <.> <e>  : "ж" #U0436
+<Multi_key> <r> <z> <x>  : "ж" #U0436
+<Multi_key> <z> <c> <e>  : "ж" #U0436
 #rze з U0437   
 <Multi_key> <r> <z> <e>  : "з" #U0437
 #rjo ё U0451   
@@ -243,4 +245,11 @@ include "%L"
 <Multi_key> <r> <f> <i> : "ѳ" #U0473 
 #riz rizyca      (iżyca – ros. ижица), już przed rewolucją używana do zapisu tylko jednego słowa (ros. мѵро tzn. krzyżmo), zastąpiona przez И 
 <Multi_key> <r> <i> <z> : "ѵ" #U0475
+
+
+##################### GRECKII DO DOPISANIA
+
+
+##################### KONIEC GREKI
+
 
