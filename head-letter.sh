@@ -20,6 +20,33 @@ U00df     ß   ss'
 EOF
 }
 
+function frenchletter
+{
+  #vim /usr/share/X11/locale/en_US.UTF-8/Compose
+  echo "compose - za pomoca tweak ustawiony prawy alt a nastepnie zawartosc"
+  echo "unicode ctrl + shift + u po czym wpisuemy cyfry po U"
+  cat << 'EOF'
+Unicode|Char|Compose_|name
+U00E9     è   \`e      accent aigu
+U00E0     á   a'      accent grave
+U00E9     é   e'      accent grave
+U00FA     ú   u'      accent grave
+U00E2     â   a^      accent circumflex
+U00EA     ê   e^      accent circumflex
+U00EE     î   i^      accent circumflex
+U00F4     ô   o^      accent circumflex
+U00FB     û   u^      accent circumflex
+U00e4     ä   "a      Tréma
+U00eb     ë   "e      Tréma
+U00f6     ö   "o      Tréma
+U00fc     ü   "u      Tréma
+U00E7     ç   c,      cédille
+U0153     œ   oe      ligatura
+U00E6     æ   ae      ligatura
+EOF
+}
+
+
 function czechletter
 {
   #vim /usr/share/X11/locale/en_US.UTF-8/Compose
@@ -200,6 +227,9 @@ function head-letter
      if  [[ "$1" == "-ger" ]]; then
          PS1="$defaultPS1"
          PS1="\[\e[1m\]\[\033[31m\]$(germanletter)\n$PS1"
+     elif [[ "$1" == "-fra" || "$1" == "-fr" ]]; then
+         PS1="$defaultPS1"
+         PS1="\[\e[1m\][\033[31m\]$(frenchletter)\n$PS1"
      elif [[ "$1" == "-cz" ]]; then
          PS1="$defaultPS1"
          PS1="\[\e[1m\]\[\033[31m\]$(czechletter)\n$PS1"
@@ -217,13 +247,15 @@ function head-letter
          PS1="\[\e[1m\]\[\033[31m\]$(ukrainianletter)\n$PS1"
      else
          PS1="$defaultPS1"
-         echo "nie podales jezyka -ger/-cz/-pl/-phoe/-rus/-ukr przywrócono domyslny header"
+         echo "nie podales jezyka -ger/-fra/-cz/-pl/-phoe/-rus/-ukr przywrócono domyslny header"
      fi
    else
      if [[ "$2" == "--popup" || "$2" == "-p" ]]; then
        else_flag="false"
        if  [[ "$1" == "-ger" ]]; then
            germanletter > headletterfile.txt
+       elif  [[ "$1" == "-fra" || "$1" == "-fr" ]]; then
+           frenchletter > headletterfile.txt
        elif [[ "$1" == "-cz" ]]; then
            czechletter > headletterfile.txt
        elif [[ "$1" == "-pl" ]]; then
@@ -235,7 +267,7 @@ function head-letter
        elif [[ "$1" == "-ukr" ]]; then
            ukrainianletter > headletterfile.txt
        else
-           echo "nie podales jezyka -ger/-cz/-pl/-phoe/-rus/-ukr przywrócono domyslny header"
+           echo "nie podales jezyka -ger/-fra/-cz/-pl/-phoe/-rus/-ukr przywrócono domyslny header"
          else_flag="true"
        fi
        if [[ "$else_flag" == "false" ]];then
@@ -245,7 +277,6 @@ function head-letter
      fi
    fi
 }
-
 #vim /usr/share/X11/locale/en_US.UTF-8/Compose
 function unicode-default 
 {
