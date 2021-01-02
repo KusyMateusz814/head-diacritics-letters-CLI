@@ -46,6 +46,20 @@ U00E6     æ   ae      ligatura
 EOF
 }
 
+function romanianletter
+{
+  #vim /usr/share/X11/locale/en_US.UTF-8/Compose
+  echo "compose - za pomoca tweak ustawiony prawy alt a nastepnie zawartosc"
+  echo "unicode ctrl + shift + u po czym wpisuemy cyfry po U"
+  cat << 'EOF'
+Unicode|Char|Compose_|name
+U00E2     â   a^      a circumflex
+U00EE     î   i^      i circumflex
+U0103     ǎ   ca      a brave
+U015F     ş   s,      s cédille
+U0163     ţ   t,      t cédille
+EOF
+}
 
 function czechletter
 {
@@ -245,6 +259,9 @@ function head-letter
      elif [[ "$1" == "-ukr" ]]; then
          PS1="$defaultPS1"
          PS1="\[\e[1m\]\[\033[31m\]$(ukrainianletter)\n$PS1"
+     elif [[ "$1" == "-rom" ]]; then
+         PS1="$defaultPS1"
+         PS1="\[\e[1m\]\[\033[31m\]$(romanianletter)\n$PS1"
      else
          PS1="$defaultPS1"
          echo "nie podales jezyka -ger/-fra/-cz/-pl/-phoe/-rus/-ukr przywrócono domyslny header"
@@ -266,8 +283,10 @@ function head-letter
            russianletter > headletterfile.txt
        elif [[ "$1" == "-ukr" ]]; then
            ukrainianletter > headletterfile.txt
+       elif [[ "$1" == "-rom" ]]; then
+           romanianletter > headletterfile.txt
        else
-           echo "nie podales jezyka -ger/-fra/-cz/-pl/-phoe/-rus/-ukr przywrócono domyslny header"
+           echo "nie podales jezyka -ger/-fra/-cz/-pl/-phoe/-rus/-ukr/-rom przywrócono domyslny header"
          else_flag="true"
        fi
        if [[ "$else_flag" == "false" ]];then
