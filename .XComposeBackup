@@ -92,7 +92,7 @@ include "%L"
 <Multi_key> <s> <i> <n>  : "𐤔" #U10914
 ##################### KONIEC FENICKI PHOENICIAN PHONIZISCH ###
 
-##################### CYRYLICA CYRILIC KYRILLIZA RUSSIAN
+##################### CYRYLICA CYRILIC KYRILLIZA UKRAINIAN
 
 #ua а U0430   
 <Multi_key> <u> <a>  : "а" #U0430
@@ -119,7 +119,7 @@ include "%L"
 #ui і U0456
 <Multi_key> <u> <i>  : "і" #U0456
 #uji ї U0457
-<Multi_key> <u> <ї>  : "ї" #U0457
+<Multi_key> <u> <j> <i>  : "ї" #U0457
 #uka к U043A   
 <Multi_key> <u> <k> <a>  : "к" #U043A
 #uel л U043B   
@@ -160,9 +160,9 @@ include "%L"
 <Multi_key> <u> <j> <u>  : "ю" #U044E
 #uja я U044F   
 <Multi_key> <u> <j> <a>  : "я" #U044F
-##################### KONIEC RUSSIAN ROSYJSKI RUSSISCH OBECNY #########
+##################### KONIEC RUSSIAN ROSYJSKI UKRAINIAN OBECNY #########
 
-##################### CYRYLICA CYRILIC KYRILLIZA Ukrainian
+##################### CYRYLICA CYRILIC KYRILLIZA RUSSIAN
 
 #ra а U0430   
 <Multi_key> <r> <a>  : "а" #U0430
