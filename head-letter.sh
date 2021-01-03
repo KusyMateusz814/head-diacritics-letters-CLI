@@ -225,7 +225,7 @@ U447     ч   cze      ucze
 U448     ш   sza      usza  
 U449     щ   szcza    uszcza
 U44C     ь   miekk    umi   
-U454     є   je       ue    
+U454     є   je       uje   
 U44E     ю   ju       uju   
 U44F     я   ja       uja   
 EOF
