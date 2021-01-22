@@ -157,35 +157,35 @@ function phoenicianletter
   echo "unicode ctrl + shift + u po czym wpisuemy cyfry po U"
 cat << 'EOF'
 Unicode|Char|Pron.|Compose_"
-U10900  𐤀      a     aleph"
-U10901  𐤁      b     beth"
-U10902  𐤂      g     giml"
-U10903  𐤃      d     dalet"
-U10904  𐤄      h     he"
-U10905  𐤅      w     waw"
-U10906  𐤆      z     zayin"
-U10907  𐤇      h.    het"
-U10908  𐤈      t     tet"
-U10909  𐤉      y     yod"
-U1090A  𐤊      m     kap"
-U1090B  𐤋      l     lamed"
-U1090C  𐤌      m     mem"
-U1090D  𐤍      n     nun"
-U1090E  𐤎      s     samek"
-U1090F  𐤏      o     ayin"
-U10910  𐤐      p     pe"
-U10911  𐤑      s     sade"
-U10912  𐤒      q     qop"
-U10913  𐤓      r     res"
-U10914  𐤔      sz    sin"
-U10915  𐤕      t.    taw"
-U10916  𐤖      p1    jeden"
-U10917  𐤗      p10   dziesieć"
-U10918  𐤘      p20   dwadzieścia"
-U10919  𐤙      p100  sto"
-U1091A  𐤚      p2    dwa"
-U1091B  𐤛      p3    trzy"
-U1091F  𐤟      p.    separator"
+U10900  𐤀      a     aleph
+U10901  𐤁      b     beth
+U10902  𐤂      g     giml
+U10903  𐤃      d     dalet
+U10904  𐤄      h     he
+U10905  𐤅      w     waw
+U10906  𐤆      z     zayin
+U10907  𐤇      h.    het
+U10908  𐤈      t     tet
+U10909  𐤉      y     yod
+U1090A  𐤊      m     kap
+U1090B  𐤋      l     lamed
+U1090C  𐤌      m     mem
+U1090D  𐤍      n     nun
+U1090E  𐤎      s     samek
+U1090F  𐤏      o     ayin
+U10910  𐤐      p     pe
+U10911  𐤑      s     sade
+U10912  𐤒      q     qop
+U10913  𐤓      r     res
+U10914  𐤔      sz    sin
+U10915  𐤕      t.    taw
+U10916  𐤖      p1    jeden
+U10917  𐤗      p10   dziesieć
+U10918  𐤘      p20   dwadzieścia
+U10919  𐤙      p100  sto
+U1091A  𐤚      p2    dwa
+U1091B  𐤛      p3    trzy
+U1091F  𐤟      p.    separator
 EOF
 }
 
