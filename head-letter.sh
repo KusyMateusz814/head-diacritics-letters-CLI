@@ -231,6 +231,40 @@ U44F     я   ja       uja
 EOF
 }
 
+function greekletter
+{
+  #vim /usr/share/X11/locale/en_US.UTF-8/Compose
+  echo "compose - za pomoca tweak ustawiony prawy alt a nastepnie zawartosc"
+  echo "unicode ctrl + shift + u po czym wpisuemy cyfry po U"
+  echo "duże litery piszemy za pomocą G zamiast g na początku"
+  cat << 'EOF'
+Unicode|Char|Pron    |Compose
+U03b1   α    alfa     ga
+U03b2   β    beta     gb
+U03b4   δ    delta    gd
+U03b5   ε    epsilon  ge
+U03c6   φ    fi       gf
+U03b3   γ    gamma    gg
+U03b7   η    eta      gh
+U03b9   ι    iota     gi
+U03b8   θ    teta     gj
+U03ba   κ    kappa    gk
+U03bb   λ    lambda   gl
+U03bc   μ    mi       gm
+U03bd   ν    ni       gn
+U03bf   ο    omikron  go
+U03c0   π    pi       gp
+U03c1   ρ    ro       gr
+U03c3   σ    sigma    gs
+U03c4   τ    tau      gt
+U03c5   υ    upsilon  gu
+U03c9   ω    omega    gw
+U03be   ξ    xi       gx
+U03c8   ψ    psi      gy
+U03b6   ζ    zeta     gz
+EOF
+}
+
 #modyfikowanie prompt
 function head-letter
 {
@@ -262,9 +296,12 @@ function head-letter
     elif [[ "$1" == "-rom" ]]; then
         PS1="$defaultPS1"
         PS1="\[\e[1m\]\[\033[31m\]$(romanianletter)\n$PS1"
+    elif [[ "$1" == "-gre" ]]; then
+        PS1="$defaultPS1"
+        PS1="\[\e[1m\]\[\033[31m\]$(greekletter)\n$PS1"
     else
         PS1="$defaultPS1"
-        echo "nie podales jezyka -ger/-fra/-cz/-pl/-phoe/-rus/-ukr/-rom przywrócono domyslny header"
+        echo "nie podales jezyka -ger/-fra/-cz/-pl/-phoe/-rus/-ukr/-rom/-gre przywrócono domyslny header"
     fi
   fi
 }
@@ -288,8 +325,10 @@ function head-letter-p
       ukrainianletter > headletterfile.txt
   elif [[ "$1" == "-rom" ]]; then
       romanianletter > headletterfile.txt
+  elif [[ "$1" == "-gre" ]]; then
+      greekletter > headletterfile.txt
   else
-      echo "nie podales jezyka -ger/-fra/-cz/-pl/-phoe/-rus/-ukr/-rom przywrócono domyslny header"
+    echo "nie podales jezyka -ger/-fra/-cz/-pl/-phoe/-rus/-ukr/-rom/-gre przywrócono domyslny header"
     else_flag="true"
   fi
   if [[ "$else_flag" == "false" ]];then
