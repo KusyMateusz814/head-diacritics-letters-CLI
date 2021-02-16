@@ -302,6 +302,7 @@ function head-letter
     else
         PS1="$defaultPS1"
         echo "nie podales jezyka -ger/-fra/-cz/-pl/-phoe/-rus/-ukr/-rom/-gre przywrócono domyslny header"
+        echo "jeśli chcesz by podpowiedzieć byla wyswietlana w zewnetrznym okienku uzyj komendy\n head-letter-p -cz"
     fi
   fi
 }

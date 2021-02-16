@@ -8,7 +8,6 @@ class MainWindow(QMainWindow):
     headletterStr = ""
 
     def __init__(self, *args, **kwargs):
-        
         headletterStr = Path('headletterfile.txt').read_text()
         print(headletterStr)
 
