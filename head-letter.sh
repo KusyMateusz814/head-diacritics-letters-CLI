@@ -309,34 +309,57 @@ function head-letter
 
 function head-letter-p
 {
-  else_flag="false"
-  if  [[ "$1" == "-ger" ]]; then
-      germanletter > headletterfile.txt
-  elif  [[ "$1" == "-fra" || "$1" == "-fr" ]]; then
-      frenchletter > headletterfile.txt
-  elif [[ "$1" == "-cz" ]]; then
-      czechletter > headletterfile.txt
-  elif [[ "$1" == "-pl" ]]; then
-      polishletter > headletterfile.txt
-  elif [[ "$1" = "-phoe" ]]; then
-      phoenicianletter > headletterfile.txt
-  elif [[ "$1" == "-rus" ]]; then
-      russianletter > headletterfile.txt
-  elif [[ "$1" == "-ukr" ]]; then
-      ukrainianletter > headletterfile.txt
-  elif [[ "$1" == "-rom" ]]; then
-      romanianletter > headletterfile.txt
-  elif [[ "$1" == "-gre" ]]; then
-      greekletter > headletterfile.txt
-  else
-    echo "nie podales jezyka -ger/-fra/-cz/-pl/-phoe/-rus/-ukr/-rom/-gre przywrócono domyslny header"
-    else_flag="true"
-  fi
-  if [[ "$else_flag" == "false" ]];then
-    popup-head-letter
-    rm headletterfile.txt
-  fi
+  SCRIPT="$(realpath "$0")"
+  SCRIPTPATH="$(dirname "$SCRIPT")"
+  echo "SCRIPT: $SCRIPT"
+  echo "SCRIPTPATH: $SCRIPTPATH"
+  #letterfile="$SCRIPTPATH/headletterfile.txt"
 }
+
+#function head-letter-p
+#{
+#  else_flag="false"
+#  echo $else_flag
+#  echo "zerowy $0"
+#  #SCRIPT=`realpath $0 `
+#  #SCRIPTPATH=`dirname "$SCRIPT" `
+#  echo "SCRIPT: $SCRIPT"
+#  echo "SCRIPTPATH: $SCRIPTPATH"
+#  #letterfile="$SCRIPTPATH/headletterfile.txt"
+#  #if  [[d "$1" == "-ger" ]]; then
+#  #    #germanletter > null#$letterfile
+#  #    echo ""
+#  #elif  [[ "$1" == "-fra" || "$1" == "-fr" ]]; then
+#  #    #frenchletter > null#$letterfile
+#  #    echo ""
+#  #elif [[ "$1" == "-cz" ]]; then
+#  #    #czechletter > null#$letterfile
+#  #    echo ""
+#  #elif [[ "$1" == "-pl" ]]; then
+#  #    polishletter > null#$letterfile
+#  #elif [[ "$1" = "-phoe" ]]; then
+#  #    phoenicianletter > null#$letterfile
+#  #elif [[ "$1" == "-rus" ]]; then
+#  #    russianletter > null#$letterfile
+#  #elif [[ "$1" == "-ukr" ]]; then
+#  #    ukrainianletter > null#$letterfile
+#  #elif [[ "$1" == "-rom" ]]; then
+#  #    romanianletter > null#$letterfile
+#  #elif [[ "$1" == "-gre" ]]; then
+#  #    greekletter > null#$letterfile
+#  #else
+#  #  echo "nie podales jezyka -ger/-fra/-cz/-pl/-phoe/-rus/-ukr/-rom/-gre przywrócono domyslny header"
+#  #  else_flag="true"
+#  #fi
+#  if [[ "$else_flag" == "false" ]];then
+#    SCRIPT="$(realpath "$0" )"
+#    SCRIPTPATH="$(dirname "$SCRIPT" )"
+#    echo "SCRIPT: $SCRIPT"
+#    e
+#    #"$SCRIPTPATH""/runnerPopupHeadLetter.sh"
+#    #rm $letterfile
+#  fi
+#}
 
 
 #vim /usr/share/X11/locale/en_US.UTF-8/Compose
