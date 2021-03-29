@@ -333,8 +333,7 @@ function head-letter-p
     else_flag="true"
   fi
   if [[ "$else_flag" == "false" ]];then
-    pwd
-    ./popup-head-letter
+    /home/matball/Projects/head-diacritics-letters-CLI/popup-head-letter       #NIE PODOBA MI SIE - coś wymyśleć
     rm headletterfile.txt
   fi
 }
