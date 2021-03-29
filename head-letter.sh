@@ -5,11 +5,17 @@ function head-letter-vim
   vim "/usr/share/X11/locale/en_US.UTF-8/Compose"
 }
 
+function wspolne_echo
+{ 
+  echo "compose - gdy włączony, klikamy ustawiony znak specjalny (prawd. prawy alt bądź flaga windows)"
+  echo "a nastepnie którąś z poniższych wartości"
+  echo "alternatywnie unicode ctrl + shift + u po czym wpisuemy cyfry po U"
+}
+
 function germanletter
 {
   #vim /usr/share/X11/locale/en_US.UTF-8/Compose
-  echo "compose - za pomoca tweak ustawiony prawy alt a nastepnie zawartosc"
-  echo "unicode ctrl + shift + u po czym wpisuemy cyfry po U"
+  wspolne_echo
   cat << 'EOF'
 Unicode|Char|Compose_"
 U00e4     ä   "a'
@@ -23,8 +29,7 @@ EOF
 function frenchletter
 {
   #vim /usr/share/X11/locale/en_US.UTF-8/Compose
-  echo "compose - za pomoca tweak ustawiony prawy alt a nastepnie zawartosc"
-  echo "unicode ctrl + shift + u po czym wpisuemy cyfry po U"
+  wspolne_echo 
   cat << 'EOF'
 Unicode|Char|Compose_|name
 U00E9     è   \`e      accent aigu
@@ -49,8 +54,7 @@ EOF
 function romanianletter
 {
   #vim /usr/share/X11/locale/en_US.UTF-8/Compose
-  echo "compose - za pomoca tweak ustawiony prawy alt a nastepnie zawartosc"
-  echo "unicode ctrl + shift + u po czym wpisuemy cyfry po U"
+  wspolne_echo
   cat << 'EOF'
 Unicode|Char|Compose_|name
 U00E2     â   a^      a circumflex
@@ -64,9 +68,8 @@ EOF
 function czechletter
 {
   #vim /usr/share/X11/locale/en_US.UTF-8/Compose
-   echo "compose - za pomoca tweak ustawiony prawy alt a nastepnie zawartosc"
-   echo "unicode ctrl + shift + u po czym wpisuemy cyfry po U"
-   cat << 'EOF'
+  wspolne_echo
+  cat << 'EOF'
 Unicode|Char|Compose_"
 U00e1   á    'a"
 U00e9   é    'e"
@@ -87,8 +90,7 @@ EOF
 function polishletter
 {
   #vim /usr/share/X11/locale/en_US.UTF-8/Compose
-  echo "compose - za pomoca tweak ustawiony prawy alt a nastepnie zawartosc"
-  echo "unicode ctrl + shift + u po czym wpisuemy cyfry po U"
+  wspolne_echo
   cat << 'EOF'
 Unicode|Char|Compose
 U0105   ą    ;a
@@ -110,8 +112,7 @@ function unicode
 
 function russianletter
 {
-  echo "compose - za pomoca tweak ustawiony prawy alt a nastepnie zawartosc" 
-  echo "unicode ctrl + shift + u po czym wpisuemy cyfry po U"
+  wspolne_echo
   cat << 'EOF'
 Unicode|Char|Pron.|Compose_"
 U430     a   a        ra    
@@ -153,8 +154,7 @@ EOF
 function phoenicianletter
 {
   #vim /usr/share/X11/locale/en_US.UTF-8/Compose
-  echo "compose - za pomoca tweak ustawiony prawy alt a nastepnie zawartosc"
-  echo "unicode ctrl + shift + u po czym wpisuemy cyfry po U"
+  wspolne echo
 cat << 'EOF'
 Unicode|Char|Pron.|Compose_"
 U10900  𐤀      a     aleph
@@ -191,8 +191,7 @@ EOF
 
 function ukrainianletter
 {
-  echo "compose - za pomoca tweak ustawiony prawy alt a nastepnie zawartosc" 
-  echo "unicode ctrl + shift + u po czym wpisuemy cyfry po U"
+  wspolne_echo
   cat << 'EOF'
 Unicode|Char|Pron.|Compose_"
 U430     a   a        ua    
@@ -234,8 +233,7 @@ EOF
 function greekletter
 {
   #vim /usr/share/X11/locale/en_US.UTF-8/Compose
-  echo "compose - za pomoca tweak ustawiony prawy alt a nastepnie zawartosc"
-  echo "unicode ctrl + shift + u po czym wpisuemy cyfry po U"
+  wspolne_echo
   echo "duże litery piszemy za pomocą G zamiast g na początku"
   cat << 'EOF'
 Unicode|Char|Pron    |Compose
@@ -335,7 +333,8 @@ function head-letter-p
     else_flag="true"
   fi
   if [[ "$else_flag" == "false" ]];then
-    popup-head-letter
+    pwd
+    ./popup-head-letter
     rm headletterfile.txt
   fi
 }
