@@ -265,6 +265,7 @@ U03b6   ζ    zeta     gz
 EOF
 }
 
+alias headletter="head-letter"
 #modyfikowanie prompt
 function head-letter
 {
@@ -307,6 +308,7 @@ function head-letter
   fi
 }
 
+alias headletter-p="head-letter-p"
 function head-letter-p
 {
   else_flag="false"
