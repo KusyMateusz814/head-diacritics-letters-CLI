@@ -345,22 +345,22 @@ function unicode-default
   vim "/usr/share/X11/locale/en_US.UTF-8/Compose"
 }
 
-function tweak_create_new_shortcuts
-{
-  if [[ "$1" == "-h" || "$1" == "--help" || "$1" == "h" || "$1" == "help"  ]]; then 
-    cat << 'EOF'
-#example execute tweak_create_new_shortcuts sin 𐤔 U10914 s z
-#OUTPUT TO FILE .XCompose
-##sin 𐤔 U10914 s z 
-##<Multi_key> <p> <s> <z> : "𐤔" #U10914
-##<Multi_key> <s> <i> <n>  : "𐤔" #U10914
-EOF
-  else
-    ~/Projects/tweaks_create_new_shortcuts/./tweak_add_shortcut.sh "$1" "$2" "$3" "$4" "$5">> ~/.XCompose
-    cpXCompose
-    cat ~/.XCompose
-  fi
-} 
+#function tweak_create_new_shortcuts
+#{
+#  if [[ "$1" == "-h" || "$1" == "--help" || "$1" == "h" || "$1" == "help"  ]]; then 
+#    cat << 'EOF'
+##example execute tweak_create_new_shortcuts sin 𐤔 U10914 s z
+##OUTPUT TO FILE .XCompose
+###sin 𐤔 U10914 s z 
+###<Multi_key> <p> <s> <z> : "𐤔" #U10914
+###<Multi_key> <s> <i> <n>  : "𐤔" #U10914
+#EOF
+#  else
+#    ~/Projects/tweaks_create_new_shortcuts/./tweak_add_shortcut.sh "$1" "$2" "$3" "$4" "$5">> ~/.XCompose
+#    cpXCompose
+#    cat ~/.XCompose
+#  fi
+#} 
 
 function unicode-firefox
 {
