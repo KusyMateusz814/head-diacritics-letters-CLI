@@ -5,3 +5,4 @@
 .*swo
 venv/
 headletterfile.txt
+.env
