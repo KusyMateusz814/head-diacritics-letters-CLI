@@ -1,5 +1,7 @@
 #!/bin/bash
-REAL=$(dirname "$(realpath "$@")")
-echo "$REAL"
-PATH="$REAL"/venv/bin:"$PATH"
-python "$REAL"/popup-head-letter.py "$@"
+
+set -a
+[-f .env ] && . .env
+set +a
+
+"$pythonProject" "$folderProject""/popup-head-letter.py" "$@"
