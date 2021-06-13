@@ -263,7 +263,30 @@ U03b6   ζ    zeta     gz
 EOF
 }
 
+function portugalletter
+{
+  #vim /usr/share/X11/locale/en_US.UTF-8/Compose
+  echo "compose - za pomoca tweak ustawiony prawy alt a nastepnie zawartosc"
+  echo "unicode ctrl + shift + u po czym wpisuemy cyfry po U"
+  echo "duże litery piszemy za pomocą G zamiast g na początku"
+  cat << 'EOF'
+Unicode|Char|Pron    |Compose
+U00E1     á    a'        acento a agudo
+U00F3     é    e'        acento o agudo
+U00FA     ú    u'        acento u agudo
+U00ED     í    i'        acento i agudo
+U00E0     à    \`a       acento a grave
+U00E2     â    a^        acento a circunflexo
+U00EA     ê    e^        acento e circunflexo
+U00F4     ô    o^        acento o circunflexo
+U00E3     ã    a shift ~ acento a til
+U00F5     õ    o shift ~ acento o til
+U00E7     ç    c,        acento c cedílha
+EOF
+}
+
 alias headletter="head-letter"
+
 #modyfikowanie prompt
 function head-letter
 {
@@ -298,9 +321,12 @@ function head-letter
     elif [[ "$1" == "-gre" ]]; then
         PS1="$defaultPS1"
         PS1="\[\e[1m\]\[\033[31m\]$(greekletter)\n$PS1"
+    elif [[ "$1" == "-port" ]]; then
+        PS1="$defaultPS1"
+        PS1="\[\e[1m\]\[\033[31m\]$(portugalletter)\n$PS1"
     else
         PS1="$defaultPS1"
-        echo "nie podales jezyka -ger/-fra/-cz/-pl/-phoe/-rus/-ukr/-rom/-gre przywrócono domyslny header"
+        echo "nie podales jezyka -ger/-fra/-cz/-pl/-phoe/-rus/-ukr/-rom/-gre/-port przywrócono domyslny header"
         echo "jeśli chcesz by podpowiedzieć byla wyswietlana w zewnetrznym okienku uzyj komendy\n head-letter-p -cz"
     fi
   fi
@@ -328,8 +354,10 @@ function head-letter-p
       romanianletter > headletterfile.txt
   elif [[ "$1" == "-gre" ]]; then
       greekletter > headletterfile.txt
+  elif [[ "$1" == "-port" ]]; then
+      portugalletter > headletterfile.txt
   else
-    echo "nie podales jezyka -ger/-fra/-cz/-pl/-phoe/-rus/-ukr/-rom/-gre przywrócono domyslny header"
+    echo "nie podales jezyka -ger/-fra/-cz/-pl/-phoe/-rus/-ukr/-rom/-gre/-port przywrócono domyslny header"
     else_flag="true"
   fi
   if [[ "$else_flag" == "false" ]];then
@@ -340,7 +368,7 @@ function head-letter-p
 
 
 #vim /usr/share/X11/locale/en_US.UTF-8/Compose
-function unicode-default 
+function unicode-default
 {
   vim "/usr/share/X11/locale/en_US.UTF-8/Compose"
 }
