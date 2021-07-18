@@ -265,7 +265,7 @@ EOF
 
 function portugalletter
 {
-  #vim /usr/share/X11/locale/en_US.UTF-8/Compose
+ #vim /usr/share/X11/locale/en_US.UTF-8/Compose
   echo "compose - za pomoca tweak ustawiony prawy alt a nastepnie zawartosc"
   echo "unicode ctrl + shift + u po czym wpisuemy cyfry po U"
   echo "duże litery piszemy za pomocą G zamiast g na początku"
@@ -282,6 +282,20 @@ U00F4     ô    o^        acento o circunflexo
 U00E3     ã    a shift ~ acento a til
 U00F5     õ    o shift ~ acento o til
 U00E7     ç    c,        acento c cedílha
+EOF
+}
+
+function danishletter
+{
+ #vim /usr/share/X11/locale/en_US.UTF-8/Compose
+  echo "compose - za pomoca tweak ustawiony prawy alt a nastepnie zawartosc"
+  echo "unicode ctrl + shift + u po czym wpisuemy cyfry po U"
+  #echo "duże litery piszemy za pomocą G zamiast g na początku"
+  cat << 'EOF'
+Unicode|Char|Compose
+U00E6     æ    ae
+U00E5     å    oa
+U00F8     ø    o/
 EOF
 }
 
@@ -324,9 +338,12 @@ function head-letter
     elif [[ "$1" == "-port" ]]; then
         PS1="$defaultPS1"
         PS1="\[\e[1m\]\[\033[31m\]$(portugalletter)\n$PS1"
+    elif [[ "$1" == "-den" ]]; then
+        PS1="$defaultPS1"
+        PS1="\[\e[1m\]\[\033[31m\]$(danishletter)\n$PS1"
     else
         PS1="$defaultPS1"
-        echo "nie podales jezyka -ger/-fra/-cz/-pl/-phoe/-rus/-ukr/-rom/-gre/-port przywrócono domyslny header"
+        echo "nie podales jezyka -ger/-fra/-cz/-pl/-phoe/-rus/-ukr/-rom/-gre/-port/-den przywrócono domyslny header"
         echo "jeśli chcesz by podpowiedzieć byla wyswietlana w zewnetrznym okienku uzyj komendy\n head-letter-p -cz"
     fi
   fi
@@ -356,8 +373,10 @@ function head-letter-p
       greekletter > headletterfile.txt
   elif [[ "$1" == "-port" ]]; then
       portugalletter > headletterfile.txt
+  elif [[ "$1" == "-den" ]]; then
+      danishletter > headletterfile.txt
   else
-    echo "nie podales jezyka -ger/-fra/-cz/-pl/-phoe/-rus/-ukr/-rom/-gre/-port przywrócono domyslny header"
+    echo "nie podales jezyka -ger/-fra/-cz/-pl/-phoe/-rus/-ukr/-rom/-gre/-port/-den przywrócono domyslny header"
     else_flag="true"
   fi
   if [[ "$else_flag" == "false" ]];then
