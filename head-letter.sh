@@ -299,6 +299,68 @@ U00F8     ø    o/
 EOF
 }
 
+function taiwaneaseletter
+{
+ #vim /usr/share/X11/locale/en_US.UTF-8/Compose
+  echo "compose - za pomoca tweak ustawiony prawy alt a nastepnie zawartosc"
+  echo "unicode ctrl + shift + u po czym wpisuemy cyfry po U"
+  #echo "duże litery piszemy za pomocą G zamiast g na początku"
+  cat << 'EOF'
+Unicode|Char|Pron  |przypominki
+TONY
+U02C9    ˉ   1      Wysoki      
+U02CA    ˊ   2      Narastajacy
+U02C7    ˇ   3      Opad-narast
+U02CB    ˋ   4      Opadający
+U02D9    ˙   5      Neutralny
+INICJALNE I FINALNE
+U3105   ㄅ   b      nos brunona K.
+U3106   ㄆ   p      raczkujący paweł
+U3107   ㄇ   m      kot magdaleny
+U3108   ㄈ   f      latający ferdynnad
+U3109   ㄉ   d      nóz demoklesa
+U310A   ㄊ   t      tańcząca siostra łucja
+U310B   ㄋ   n      napierdalający ptak
+U310C   ㄌ   i      smocza swastyka - to też ideologia
+U310D   ㄍ   g      brat gaweł
+U310E   ㄎ   k      kulejący triceratops
+U310F   ㄏ   h      huśtająca się małpa
+U3110   ㄐ   j      krzycząca joanna
+U3111   ㄑ   q      kaczor donald to qurdupel
+U3112   ㄒ   x      xioze słoni 
+U3113   ㄓ   zh     zapal to hubert
+U3114   ㄔ   ch     chełmska żyrafa
+U3115   ㄕ   sh     syczący henryk.
+U3116   ㄖ   r      mięso z rysia
+U3117   ㄗ   z      zieliński piłkarzem stulecia
+U3118   ㄘ   c      tryskawki ciotki
+U3119   ㄙ   s      samolubny trójkąt
+U311A   ㄚ   y,a    ksiądz yan atakuje
+U311B   ㄛ   o      otyły wielbłąd
+U311C   ㄜ   e      gęś epopleksji
+U311D   ㄝ   ie     liść ie...bnął o ziemie
+U311E   ㄞ   ai     ai to nie jest miłośc, to tylko zdaje się nam
+U311F   ㄟ   ei     ei gołąb - to nie jest miłość ! to tylko zdaje się nam!
+U3120   ㄠ   ao     udało się nam wyciąć aortę człowieka ! dobra robota!
+U3121   ㄡ   ou     ou... ale ogromna trójkątna głowa
+U3122   ㄢ   an     anhalt helmut zatrzymuje każdy pocisk
+U3123   ㄣ   en     jebać pisen !
+U3124   ㄤ   ang    angielska skrzecząca piosenkarka
+U3125   ㄥ   eng    fajw oklocki zafajdane
+U3126   ㄦ   er     ergh ! jaka woń ! a! niee ! to wędka !!!
+U3127   ㄧ   i,y    irytujący gwóźdź
+U3128   ㄨ   u,v    uwiedziony przez wiedźme z archiwum X
+U3129   ㄩ   ü, yu  akwarium dynasti yuan 
+U312A   ㄪ   ????????????
+U312B   ㄫ   ????????????
+U312C   ㄭ   ????????????
+U312D   ㄮ   ????????????
+
+EOF
+}
+
+alias taiwaneasebopomofo=taiwaneaseletter
+
 alias headletter="head-letter"
 
 #modyfikowanie prompt
@@ -341,9 +403,12 @@ function head-letter
     elif [[ "$1" == "-den" ]]; then
         PS1="$defaultPS1"
         PS1="\[\e[1m\]\[\033[31m\]$(danishletter)\n$PS1"
+    elif [[ "$1" == "-taj" ]]; then
+	PS1="$defaultPS1"
+	PS1="\[\e[1m\]\[\033[31m\]$(taiwaneaseletter)\n$PS1"
     else
         PS1="$defaultPS1"
-        echo "nie podales jezyka -ger/-fra/-cz/-pl/-phoe/-rus/-ukr/-rom/-gre/-port/-den przywrócono domyslny header"
+        echo "nie podales jezyka -ger/-fra/-cz/-pl/-phoe/-rus/-ukr/-rom/-gre/-port/-den/-taj przywrócono domyslny header"
         echo "jeśli chcesz by podpowiedzieć byla wyswietlana w zewnetrznym okienku uzyj komendy\n head-letter-p -cz"
     fi
   fi
@@ -375,8 +440,10 @@ function head-letter-p
       portugalletter > headletterfile.txt
   elif [[ "$1" == "-den" ]]; then
       danishletter > headletterfile.txt
+  elif [[ "$1" == "-taj" ]]; then
+      taiwaneaseletter > headletterfile.txt
   else
-    echo "nie podales jezyka -ger/-fra/-cz/-pl/-phoe/-rus/-ukr/-rom/-gre/-port/-den przywrócono domyslny header"
+    echo "nie podales jezyka -ger/-fra/-cz/-pl/-phoe/-rus/-ukr/-rom/-gre/-port/-den/-taj przywrócono domyslny header"
     else_flag="true"
   fi
   if [[ "$else_flag" == "false" ]];then

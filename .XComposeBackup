@@ -296,4 +296,42 @@ include "%L"
 <Multi_key> <g> <z>  : "ζ"   #U03B6    # GREEK SMALL LETTER ZETA
 ##################### KONIEC GREKI
 
-
+################### TAJWAŃSKI bopomofo zhuyin ################
+<Multi_key> <t> <b>  : "ㄅ"  #U3105    # b - nos brunona k
+<Multi_key> <t> <p>  : "ㄆ"  #U3106    # p - raczkujący paweł
+<Multi_key> <t> <m>  : "ㄇ"  #U3107    # m - kot magdaleny
+<Multi_key> <t> <f>  : "ㄈ"  #U3108    # f - latający ferdynand
+<Multi_key> <t> <d>  : "ㄉ"  #U3109    # d - nóz demoklesa
+<Multi_key> <t> <t>  : "ㄊ"  #U310A    # t - tańcząca siostra łucja
+<Multi_key> <t> <n>  : "ㄋ"  #U310B    # n - napierdalający ptak
+<Multi_key> <t> <i>  : "ㄌ"  #U310C    # i - smocza swastyka - to też ideologia
+<Multi_key> <t> <g>  : "ㄍ"  #U310D    # g - gaweł
+<Multi_key> <t> <k>  : "ㄎ"  #U310E    # k - kulejący triceratops
+<Multi_key> <t> <h>  : "ㄏ"  #U310F    # h - huśtająca się małpa
+<Multi_key> <t> <j>  : "ㄐ"  #U3110    # j - krzycząca joanna
+<Multi_key> <t> <q>  : "ㄑ"  #U3111    # q - kaczor donald to jednak qurdupel
+<Multi_key> <t> <x>  : "ㄒ"  #U3112    # x - książe słoń
+<Multi_key> <t> <z> <h>  : "ㄓ"  #U3113    # zh - zgaś to hubert
+<Multi_key> <t> <c> <h>  : "ㄔ"  #U3114    # ch - nos brunona k
+<Multi_key> <t> <s> <h> : "ㄕ"  #U3115    # sh - syczący hubert
+<Multi_key> <t> <r>  : "ㄖ"  #U3116    # r -  mieso z rysia  z - zieliński piłkarzem stulecia
+<Multi_key> <t> <z>  : "ㄗ"  #U3117    # z - zieliński piłkarzem stulecia
+<Multi_key> <t> <c>  : "ㄘ"  #U3118    # c - truskawki ciotki
+<Multi_key> <t> <s>  : "ㄙ"  #U3119    # s - samolubny trójkąt
+<Multi_key> <t> <y>  : "ㄚ"  #U311A    # y,a  - ksiadz yan atakuje
+<Multi_key> <t> <o>  : "ㄛ"  #U311B    # o - otyły wielbłąd
+<Multi_key> <t> <e>  : "ㄜ"  #U311C    # e - geś epopleksji
+<Multi_key> <t> <i> <e> : "ㄝ"  #U311D  # ie - liśc ie... bnal o podłogę
+<Multi_key> <t> <a> <i> : "ㄞ"  #U311E  # ai - ai to nie jest miłośc, to tylko zdaje się tak nam!
+<Multi_key> <t> <e> <i> : "ㄟ"  #U311F  # ei - ei gołąb ! nie opierdalaj się !
+<Multi_key> <t> <a> <o> : "ㄠ"  #U3120  # ao - udało się nam wyciąc aortę człowieka ! dobra robota !
+<Multi_key> <t> <o> <u> : "ㄡ"  #U3121  # ou - ou ... ale ogromna głowa zatrzymuje każdy pocisk !
+<Multi_key> <t> <a> <n> : "ㄢ"  #U3122  # an - anhalt helmut zatrzymuje każdy pocisk
+<Multi_key> <t> <e> <n> : "ㄣ"  #U3123  # en - jebać pisen !
+<Multi_key> <t> <a> <n> <g>  : "ㄤ"  #U3124    # ang - angielska skrzecząca piosenkarka
+<Multi_key> <t> <p>  : "ㄥ"  #U3125    # eng - fajw oklocki zafajdane
+<Multi_key> <t> <e> <r> : "ㄦ"  #U3126    # argh ! jaka woń ! niee ! to  wędka !   
+<Multi_key> <t> <i>  : "ㄧ"  #U3127    # i, y - irytujący gwóźdź
+<Multi_key> <t> <u>  : "ㄨ"  #U3128    # u - uwiedziony przez wiedźme z archiwum X
+<Multi_key> <t> <p>  : "ㄩ"  #U3129    # ü, yu - akwarium yuan
+###################### koniec tajwańskiego
